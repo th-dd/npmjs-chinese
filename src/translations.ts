@@ -35,6 +35,7 @@ export const translationRules: TranslationRule[] = [
   ['Downloads · Last Week', '下载量 · 上周'],
   ['Downloads · Last Month', '下载量 · 上月'],
   [/a minute ago/gi, '1 分钟前'],
+  ['a few seconds ago', '几秒前'],
 
   // 顶部横幅通知
   ['You don’t have two-factor authentication (2FA) enabled on your account.', '您的账户尚未启用双因素身份验证 (2FA)。'],
