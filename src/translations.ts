@@ -37,7 +37,7 @@ export const translationRules: TranslationRule[] = [
   [/a minute ago/gi, '1 分钟前'],
 
   // 顶部横幅通知
-  ['You don\'t have two-factor authentication (2FA) enabled on your account.', '您的账户尚未启用双因素身份验证 (2FA)。'],
+  ['You don’t have two-factor authentication (2FA) enabled on your account.', '您的账户尚未启用双因素身份验证 (2FA)。'],
   ['Configure 2FA', '配置 2FA'],
   ['or', '或'],
   ['visit our docs', '访问我们的文档'],
