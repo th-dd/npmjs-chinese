@@ -34,8 +34,14 @@ export const translationRules: TranslationRule[] = [
   ['Search', '搜索'],
   ['Downloads · Last Week', '下载量 · 上周'],
   ['Downloads · Last Month', '下载量 · 上月'],
+  [/a minute ago/gi, '1 分钟前'],
 
   // 顶部横幅通知
+  ['You don\'t have two-factor authentication (2FA) enabled on your account.', '您的账户尚未启用双因素身份验证 (2FA)。'],
+  ['Configure 2FA', '配置 2FA'],
+  ['or', '或'],
+  ['visit our docs', '访问我们的文档'],
+  ['to learn more.', '以了解更多信息。'],
   ['Security Update', '安全更新'],
   [': Classic tokens have been revoked. Granular tokens are now limited to 90 days and require 2FA by default. Update your CI/CD workflows to avoid disruption.', '：经典令牌已被撤销。细粒度令牌现在限制为 90 天，并默认要求双重验证。请更新您的 CI/CD 工作流以避免中断。'],
   ['Learn more', '了解更多'],
@@ -204,9 +210,12 @@ export const translationRules: TranslationRule[] = [
   ['Modify 2FA', '修改双重验证'],
   ['Link with GitHub', '关联 GitHub'],
   ['Remove', '移除'],
+  ['Add New Organization', '添加新组织'],
   ['Delete your account', '删除您的账户'],
   ['Link your social accounts in the', '在'],
   ['to make them visible to others.', '中关联您的社交账户，让其他人可以看到。'],
+  ['"Free" Plan', '"免费版" 套餐'],
+  ['Unlimited Public Packages', '无限公共包'],
   ['packages', '软件包'],
   ['None', '无'],
   ['Billing Information', '账单信息'],
@@ -223,8 +232,7 @@ export const translationRules: TranslationRule[] = [
   ['Send us a message', '给我们发送消息'],
   ['Staged Packages', '已暂存的软件包'],
   ['Review and manage staged package versions before they are published to the registry.', '在暂存包版本发布到注册表之前，对其进行审查和管理。'],
-  ['There are no package versions waiting for review.', '当前没有等待审查的包版本。'],
-  ['Staged versions will appear here when a version requires approval.', '当版本需要审批时，暂存版本将显示在此处。'],
+  ['There are no package versions waiting for review. Staged versions will appear here when a version requires approval.', '当前没有等待审查的包版本。当版本需要审批时，暂存版本将显示在此处。'],
   ['Learn more about staged publishing', '了解关于暂存发布的更多信息'],
 
   // 包详情页
@@ -310,6 +318,36 @@ export const translationRules: TranslationRule[] = [
   ['Verify you are a human', '验证您是人类'],
   ['Create an account', '创建账户'],
   ['Already have an account?', '已经有账户？'],
+
+  // about 关于 npm
+  ['About npm', '关于 npm'],
+  ['npm, Inc. is a company founded in 2014, and was acquired by GitHub in 2020. npm is a critical part of the JavaScript community and helps support one of the largest developer ecosystems in the world.', 'npm, Inc. 是一家成立于 2014 年的公司，于 2020 年被 GitHub 收购。npm 是 JavaScript 社区的关键组成部分，并帮助支持着全球最大的开发者生态系统之一。'],
+  ['npm is lots of things.', 'npm 承载着许多角色。'],
+  ['npm is the package manager for ', 'npm 是 '],
+  ['Node.js', 'Node.js'],
+  ['. It was created in 2009 as an open source project to help JavaScript developers easily share packaged modules of code.', ' 的包管理器。它于 2009 年作为一个开源项目创建，旨在帮助 JavaScript 开发者轻松共享打包的代码模块。'],
+  ['open source project', '开源项目'],
+  ['The npm Registry is a public collection of packages of open-source code for Node.js, front-end web apps, mobile apps, robots, routers, and countless other needs of the JavaScript community.', 'npm 注册表是一个公共的软件包集合，包含了适用于 Node.js、前端 Web 应用、移动应用、机器人、路由器以及 JavaScript 社区无数其他需求的开源代码。'],
+  ['npm is the command line client that allows developers to install and publish those packages.', 'npm 是命令行客户端，允许开发者安装和发布这些软件包。'],
+
+  // support 支持
+  ['Contact Us', '联系我们'],
+  ['Get help with the npm registry or your npm account.', '获取有关 npm 注册表或您的 npm 账户的帮助。'],
+  ['Please contact us if you need help with the npm registry or with your npm account, if you are reporting security concerns in an npm product, or if you need to report malicious or abusive behavior in a package in the registry.', '如果您需要有关 npm 注册表或 npm 账户的帮助，如果您要报告 npm 产品中的安全问题，或者如果您需要报告注册表中某个软件包的恶意或滥用行为，请联系我们。'],
+  ['How can we help?', '我们能如何帮助您？'],
+  ["I'm reporting spam, abuse or a security issue", '我要举报垃圾邮件、滥用行为或安全问题'],
+  ['My Security Issue', '我的安全问题'],
+  ['Select...', '选择...'],
+  ["If you're having trouble using the npm command-line interface, or you need help with a project that you’re working on, we recommend that you check out the Software Development board of the ", '如果您在使用 npm 命令行界面时遇到问题，或者您需要正在处理的项目方面的帮助，我们建议您查看 '],
+  ['GitHub Community forums', 'GitHub 社区论坛'],
+  ['. It was created in 2009 as an open source project to help JavaScript developers easily share packaged modules of code.', ' 的软件开发板块。'],
+  ['Giving Feedback', '提供反馈'],
+  ['If you have suggestions for how we can improve npm please ', '如果您对如何改进 npm 有建议，请'],
+  ['open a discussion', '发起讨论'],
+  [' in our feedback forum.', '在我们的反馈论坛中。'],
+  ['Press Relations', '新闻关系'],
+  ['Press inquiries should be addressed to ', '新闻垂询请联系 '],
+  
   // ==================== 正则表达式规则 ====================
   // 格式：[正则表达式, 翻译文本]
   // 特点：灵活匹配，支持捕获组，需谨慎使用
