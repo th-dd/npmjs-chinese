@@ -17,7 +17,7 @@ export default defineConfig({
           'https://www.npmjs.org/*',
           'https://npmjs.org/*',
         ],
-        icon: 'https://www.npmjs.com/favicon.ico',
+        icon: 'https://cdn.jsdelivr.net/gh/npm/logos@master/npm%20square/n-64.png',
         grant: 'none',
         'run-at': 'document-end',
         license: 'MIT',
