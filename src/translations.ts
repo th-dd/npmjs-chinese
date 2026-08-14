@@ -39,6 +39,8 @@ export const translationRules: TranslationRule[] = [
   ['Security Update', '安全更新'],
   [': Classic tokens have been revoked. Granular tokens are now limited to 90 days and require 2FA by default. Update your CI/CD workflows to avoid disruption.', '：经典令牌已被撤销。细粒度令牌现在限制为 90 天，并默认要求双重验证。请更新您的 CI/CD 工作流以避免中断。'],
   ['Learn more', '了解更多'],
+  ['npm tokens that bypass 2FA are being restricted - account changes (Aug 2026) and direct publishing (Jan 2027).', '绕过双因素身份验证的 npm 令牌正在受到限制——涉及账户变更（2026年8月）和直接发布（2027年1月）。'],
+  ['Learn how to prepare →', '了解如何准备 →'],
   ['Front-end', '前端'],
   ['Back-end', '后端'],
   ['CLI', '命令行工具'],
@@ -101,6 +103,10 @@ export const translationRules: TranslationRule[] = [
   ['Upgrade your account', '升级您的账户'],
   ['Log into your account and', '登录您的账户并'],
   ['upgrade your plan', '升级您的套餐'],
+
+  // products/teams 团队版
+  ['Share code and collaborate with the tools that make JavaScript the world\'s best software ecosystem', '使用使 JavaScript 成为全球最佳软件生态系统的工具来共享代码和协作'],
+  ['GET STARTED', '开始使用'],
   
   // 汉堡菜单 / 用户菜单
   ['Profile', '个人资料'],
@@ -110,6 +116,7 @@ export const translationRules: TranslationRule[] = [
   ['Access Tokens', '访问令牌'],
   ['Organizations', '组织'],
   ['Add Organization', '添加组织'],
+  ['Staged Packages', '已暂存的软件包'],
   ['Sign Out', '退出登录'],
 
   // 访问令牌页面
@@ -181,8 +188,10 @@ export const translationRules: TranslationRule[] = [
   ['Two-Factor Authentication', '双重身份验证'],
   ['Enabled for authorization and publishing', '已启用授权和发布验证'],
   ['Authenticator app', '身份验证器应用'],
+  ['Enable 2FA', '启用双因素身份验证'],
   ['security', '安全'],
   ['keys', '密钥'],
+  ['Full Name', '全名'],
   ['Linked Accounts & Recovery Option', '关联账户和恢复选项'],
   ['You can link existing or new accounts to help us verify your identity in the case of account recovery. Linked accounts will show up on your profile page.', '您可以关联现有或新账户，以便在账户恢复时帮助我们验证您的身份。关联的账户将显示在您的个人资料页面上。'],
   ['Delete Account', '删除账户'],
@@ -194,9 +203,29 @@ export const translationRules: TranslationRule[] = [
   ['Discard Changes', '放弃更改'],
   ['Modify 2FA', '修改双重验证'],
   ['Link with GitHub', '关联 GitHub'],
+  ['Remove', '移除'],
   ['Delete your account', '删除您的账户'],
   ['Link your social accounts in the', '在'],
   ['to make them visible to others.', '中关联您的社交账户，让其他人可以看到。'],
+  ['packages', '软件包'],
+  ['None', '无'],
+  ['Billing Information', '账单信息'],
+  ['Plan', '套餐'],
+  ['Monthly Bill', '月度账单'],
+  ['Amount:', '金额：'],
+  ['No monthly bill', '本月无账单'],
+  ['Change Plan', '更改套餐'],
+  ['Upgrading will enable:', '升级将启用：'],
+  ['Publish Private Packages', '发布私有包'],
+  ['Install Private Packages', '安装私有包'],
+  ['Upgrade Plan ($7/User)', '升级套餐（每用户 $7）'],
+  ['Get Support', '获取支持'],
+  ['Send us a message', '给我们发送消息'],
+  ['Staged Packages', '已暂存的软件包'],
+  ['Review and manage staged package versions before they are published to the registry.', '在暂存包版本发布到注册表之前，对其进行审查和管理。'],
+  ['There are no package versions waiting for review.', '当前没有等待审查的包版本。'],
+  ['Staged versions will appear here when a version requires approval.', '当版本需要审批时，暂存版本将显示在此处。'],
+  ['Learn more about staged publishing', '了解关于暂存发布的更多信息'],
 
   // 包详情页
   ['Install', '安装'],
