@@ -283,7 +283,15 @@ export const translationRules: TranslationRule[] = [
   ['published', '发布于'],
   ['ago', '前'],
   ['Keywords', '关键词'],
-  ['Maintainers', '维护者'],
+  ['Maintainers', '维护者']
+  ['Default', '默认'],
+  ['Most downloaded this week', '本周下载最多'],
+  ['Most downloaded this month', '本月下载最多'],
+  ['Most dependents', '最多依赖者'],
+  ['Recently published', '最近发布'],
+  ['dependents', '依赖者'],
+  ['an hour ago', '1 小时前'],
+  ['a year ago', '1 年前'],
 
   // 统计信息
   ['downloads in the last day', '最近一天的下载量'],
@@ -351,6 +359,8 @@ export const translationRules: TranslationRule[] = [
   // ==================== 正则表达式规则 ====================
   // 格式：[正则表达式, 翻译文本]
   // 特点：灵活匹配，支持捕获组，需谨慎使用
+
+  [/^(\d+[+,]?\d*)\s+packages?\s+found$/, '找到 $1 个包'],
 
   // 时间相关
   [/(\d+)\s+days?\s+ago/gi, '$1 天前'],
