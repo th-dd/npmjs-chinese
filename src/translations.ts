@@ -283,7 +283,7 @@ export const translationRules: TranslationRule[] = [
   ['published', '发布于'],
   ['ago', '前'],
   ['Keywords', '关键词'],
-  ['Maintainers', '维护者']
+  ['Maintainers', '维护者'],
   ['Default', '默认'],
   ['Most downloaded this week', '本周下载最多'],
   ['Most downloaded this month', '本月下载最多'],
