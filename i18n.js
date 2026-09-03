@@ -1,7 +1,6 @@
 window.I18N = {
   // ======== 配置 ========
   conf: {
-    // 页面类型识别（优先级从高到低）
     rePagePath: [
       { type: "package", pattern: /^\/package\/[^/]+/ },
       { type: "package", pattern: /^\/package\/[^/]+\/[^/]+/ },
@@ -14,7 +13,6 @@ window.I18N = {
       { type: "home", pattern: /^\/(?:$|\?)/ },
       { type: "default", pattern: /.*/ }
     ],
-    // 忽略翻译的选择器
     ignoreSelectorPage: {
       "*": [".package-name", ".package-version", ".code-block", "pre", "code", "input", "textarea", ".user-info", "#readme", ".readme"],
       "package": [".package-description"],
@@ -24,7 +22,6 @@ window.I18N = {
       "*": [".readme", "#readme", "pre", "code"],
       "package": [".package-description"]
     },
-    // 需要监听文本变化的页面
     characterDataPage: ["package", "search"]
   },
 
@@ -182,7 +179,30 @@ window.I18N = {
       " in our feedback forum.": "在我们的反馈论坛中。",
       "Press Relations": "新闻关系",
       "Press inquiries should be addressed to ": "新闻垂询请联系 ",
-      "Report malware": "报告恶意软件"
+      "Report malware": "报告恶意软件",
+
+      // ======== 新增词条（2026-09-03） ========
+      // 用户个人主页
+      "+ Add New Organization": "+ 添加新组织",
+      "+ Add Private Packages": "+ 添加私有包",
+
+      // 令牌设置页
+      "Name": "名称",
+
+      // 产品页
+      "Create an account": "创建账户",
+      "For Public Package Authors": "适用于公共包作者",
+      "For Individual Creators": "适用于个人创作者",
+      "For Teams & Organizations": "适用于团队与组织",
+      "per month": "/月",
+      "per user": "/用户",
+      "Create": "创建",
+      "unlimited public packages": "无限公共包",
+      "unlimited private packages": "无限私有包",
+      "Package-based": "基于包的",
+      "Get Started With Pro": "开始使用 Pro",
+      "Get Started With Teams": "开始使用 Teams",
+      "Unlimited public packages & automatic security warnings": "无限公共包与自动安全警告"
     },
     "regexp": [
       [/^(\d+[+,]?\d*)\s+packages?\s+found$/, "找到 $1 个包"],
@@ -433,7 +453,10 @@ window.I18N = {
 
   // ======== 用户个人主页 ========
   "profile": {
-    "static": { "Joined": "加入时间" },
+    "static": {
+      "Joined": "加入时间"
+      // 注意："+ Add New Organization" 和 "+ Add Private Packages" 已移至 public
+    },
     "regexp": [],
     "title": { "static": {}, "regexp": [] }
   },
