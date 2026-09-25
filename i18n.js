@@ -1,9 +1,9 @@
 window.I18N = {
   // ======== 配置 ========
   conf: {
+    // 页面类型识别（优先级从高到低）
     rePagePath: [
       { type: "package", pattern: /^\/package\/[^/]+/ },
-      { type: "package", pattern: /^\/package\/[^/]+\/[^/]+/ },
       { type: "search", pattern: /^\/search/ },
       { type: "auth", pattern: /^\/(signin|signup|login|register)/ },
       { type: "settings", pattern: /^\/settings/ },
@@ -13,15 +13,18 @@ window.I18N = {
       { type: "home", pattern: /^\/(?:$|\?)/ },
       { type: "default", pattern: /.*/ }
     ],
+    // 忽略翻译的选择器（traverse 时使用）
     ignoreSelectorPage: {
       "*": [".package-name", ".package-version", ".code-block", "pre", "code", "input", "textarea", ".user-info", "#readme", ".readme"],
       "package": [".package-description"],
       "search": [".search-result .package-name"]
     },
+    // 忽略 MutationObserver 的选择器（动态变化过滤）
     ignoreMutationSelectorPage: {
       "*": [".readme", "#readme", "pre", "code"],
       "package": [".package-description"]
     },
+    // 需要监听文本节点变化的页面
     characterDataPage: ["package", "search"]
   },
 
@@ -181,7 +184,6 @@ window.I18N = {
       "Press inquiries should be addressed to ": "新闻垂询请联系 ",
       "Report malware": "报告恶意软件",
 
-      // ======== 新增词条（2026-09-03） ========
       // 用户个人主页
       "+ Add New Organization": "+ 添加新组织",
       "+ Add Private Packages": "+ 添加私有包",
@@ -453,10 +455,7 @@ window.I18N = {
 
   // ======== 用户个人主页 ========
   "profile": {
-    "static": {
-      "Joined": "加入时间"
-      // 注意："+ Add New Organization" 和 "+ Add Private Packages" 已移至 public
-    },
+    "static": { "Joined": "加入时间" },
     "regexp": [],
     "title": { "static": {}, "regexp": [] }
   },
