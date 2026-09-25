@@ -6,14 +6,13 @@
 // @author       叹号大帝
 // @icon         https://raw.githubusercontent.com/npm/logos/master/npm%20square/n-64.png
 // @match        https://www.npmjs.com/*
-// @require      https://raw.githubusercontent.com/th-dd/npmjs-chinese/dev/i18n.js
+// @require      https://raw.githubusercontent.com/th-dd/npmjs-chinese/feat/init/i18n.js
 // @grant        none
 // ==/UserScript==
 
 (function() {
     'use strict';
 
-    // 等待词库加载
     if (typeof window.I18N === 'undefined') {
         console.warn('[npmjs 汉化] 词库未加载，请检查网络或刷新重试');
         return;
@@ -157,34 +156,79 @@
         timer = setTimeout(fn, delay);
     }
 
+    // ---------- MutationObserver 忽略过滤 ----------
+    function shouldIgnoreMutation(mutation) {
+        const pageType = getPageType();
+        const ignoreConf = I18N.conf.ignoreMutationSelectorPage || {};
+        const ignoreSelectors = [...(ignoreConf['*'] || []), ...(ignoreConf[pageType] || [])];
+        if (!ignoreSelectors.length) return false;
+
+        const target = mutation.target;
+        const el = target.nodeType === Node.ELEMENT_NODE ? target : target.parentElement;
+        if (!el) return false;
+
+        const selectorStr = ignoreSelectors.join(',');
+        return !!(el.closest && el.closest(selectorStr));
+    }
+
+    // ---------- MutationObserver 设置 ----------
+    let observer = null;
+
+    function setupObserver() {
+        if (observer) {
+            observer.disconnect();
+            observer = null;
+        }
+
+        const pageType = getPageType();
+        const characterDataEnabled = (I18N.conf.characterDataPage || []).includes(pageType);
+
+        observer = new MutationObserver((mutations) => {
+            const meaningful = mutations.some(m => !shouldIgnoreMutation(m));
+            if (meaningful) {
+                debounce(performTranslate);
+            }
+        });
+
+        const target = document.getElementById('app') || document.body;
+        observer.observe(target, {
+            childList: true,
+            subtree: true,
+            characterData: characterDataEnabled,
+            attributes: false
+        });
+    }
+
+    // ---------- 路由变化统一处理 ----------
+    function onRouteChange() {
+        setupObserver();
+        debounce(performTranslate);
+    }
+
     // ---------- 触发时机 ----------
     if (document.readyState === 'complete') {
-        setTimeout(performTranslate, 200);
+        setTimeout(() => {
+            setupObserver();
+            performTranslate();
+        }, 200);
     } else {
-        window.addEventListener('load', () => setTimeout(performTranslate, 200));
+        window.addEventListener('load', () => {
+            setupObserver();
+            setTimeout(performTranslate, 200);
+        });
     }
 
     const origPushState = history.pushState;
     history.pushState = function() {
         origPushState.apply(this, arguments);
-        debounce(performTranslate);
+        onRouteChange();
     };
     const origReplaceState = history.replaceState;
     history.replaceState = function() {
         origReplaceState.apply(this, arguments);
-        debounce(performTranslate);
+        onRouteChange();
     };
-    window.addEventListener('popstate', () => debounce(performTranslate));
-
-    const characterDataEnabled = (I18N.conf.characterDataPage || []).length > 0;
-    const observer = new MutationObserver(() => debounce(performTranslate));
-    const target = document.getElementById('app') || document.body;
-    observer.observe(target, {
-        childList: true,
-        subtree: true,
-        characterData: characterDataEnabled,
-        attributes: false
-    });
+    window.addEventListener('popstate', onRouteChange);
 
     console.log('[npmjs 汉化] 已启动，当前页面类型:', getPageType());
 })();
