@@ -6,7 +6,7 @@
 // @author       叹号大帝
 // @icon         https://raw.githubusercontent.com/npm/logos/master/npm%20square/n-64.png
 // @match        https://www.npmjs.com/*
-// @require      https://raw.githubusercontent.com/th-dd/npmjs-chinese/feat/init/i18n.js
+// @require      https://raw.githubusercontent.com/th-dd/npmjs-chinese/dev/i18n.js
 // @grant        none
 // ==/UserScript==
 
@@ -195,7 +195,8 @@
             childList: true,
             subtree: true,
             characterData: characterDataEnabled,
-            attributes: false
+            attributes: true,
+            attributeFilter: ['title', 'aria-label', 'placeholder', 'value', 'label']
         });
     }
 
