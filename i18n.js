@@ -134,7 +134,7 @@ window.I18N = {
       "New packages": "新包",
       "The world's largest software registry": "全球最大的软件注册表",
       "Find packages": "查找包",
-      "You don't have two-factor authentication (2FA) enabled on your account.": "您的账户尚未启用双因素身份验证 (2FA)。",
+      "You don’t have two-factor authentication (2FA) enabled on your account.": "您的账户尚未启用双因素身份验证 (2FA)。",
       "Configure 2FA": "配置 2FA",
       "or": "或",
       "visit our docs": "访问我们的文档",
