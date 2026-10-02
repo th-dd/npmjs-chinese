@@ -140,7 +140,7 @@ window.I18N = {
       "visit our docs": "访问我们的文档",
       "to learn more.": "以了解更多信息。",
       "Security Update": "安全更新",
-      "npm tokens that bypass 2FA are being restricted — account changes (Aug 2026) and direct publishing (Jan 2027).": "绕过双因素身份验证的 npm 令牌正在受到限制——涉及账户变更（2026年8月）和直接发布（2027年1月）。"
+      "npm tokens that bypass 2FA are being restricted - account changes (Aug 2026) and direct publishing (Jan 2027).": "绕过双因素身份验证的 npm 令牌正在受到限制——涉及账户变更（2026年8月）和直接发布（2027年1月）。"
       "Learn how to prepare →": "了解如何准备 →",
       "Publish your own packages to the world's most popular software ecosystem": "将您自己的包发布到全球最受欢迎的软件生态系统中",
       "Unlimited public packages": "无限公共包",
