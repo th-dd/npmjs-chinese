@@ -2,16 +2,46 @@ window.I18N = {
   // ======== 配置 ========
   conf: {
     // 页面类型识别（优先级从高到低）
-    rePagePath: [
-      { type: "package", pattern: /^\/package\/[^/]+/ },
-      { type: "search", pattern: /^\/search/ },
-      { type: "auth", pattern: /^\/(signin|signup|login|register)/ },
-      { type: "settings", pattern: /^\/settings/ },
-      { type: "org", pattern: /^\/orgs\/[^/]+/ },
-      { type: "publish", pattern: /^\/publish/ },
-      { type: "profile", pattern: /^\/~[^/]+/ },
-      { type: "home", pattern: /^\/(?:$|\?)/ },
-      { type: "default", pattern: /.*/ }
+    rePagePath: [{
+        type: "package",
+        pattern: /^\/package\/[^/]+/
+      },
+      {
+        type: "search",
+        pattern: /^\/search/
+      },
+      {
+        type: "auth",
+        pattern: /^\/(signin|signup|login|register)/
+      },
+      {
+        type: "settings",
+        pattern: /^\/settings/
+      },
+      {
+        type: "org",
+        pattern: /^\/orgs\/[^/]+/
+      },
+      {
+        type: "publish",
+        pattern: /^\/publish/
+      },
+      {
+        type: "profile",
+        pattern: /^\/~[^/]+/
+      },
+      {
+        type: "pricing",
+        pattern: /^\/products/
+      },
+      {
+        type: "home",
+        pattern: /^\/(?:$|\?)/
+      },
+      {
+        type: "default",
+        pattern: /.*/
+      }
     ],
     // 忽略翻译的选择器（traverse 时使用）
     ignoreSelectorPage: {
@@ -134,12 +164,13 @@ window.I18N = {
       "New packages": "新包",
       "The world's largest software registry": "全球最大的软件注册表",
       "Find packages": "查找包",
-      "You don't have two-factor authentication (2FA) enabled on your account.": "您的账户尚未启用双因素身份验证 (2FA)。",
+      "You don’t have two-factor authentication (2FA) enabled on your account.": "您的账户尚未启用双因素身份验证 (2FA)。",
       "Configure 2FA": "配置 2FA",
       "or": "或",
       "visit our docs": "访问我们的文档",
       "to learn more.": "以了解更多信息。",
       "Security Update": "安全更新",
+      "npm tokens that bypass 2FA are being restricted — account changes (Aug 2026) and direct publishing (Jan 2027).": "绕过双因素身份验证的 npm 令牌正在受到限制——涉及账户变更（2026年8月）和直接发布（2027年1月）。",
       "Learn how to prepare →": "了解如何准备 →",
       "Publish your own packages to the world's most popular software ecosystem": "将您自己的包发布到全球最受欢迎的软件生态系统中",
       "Unlimited public packages": "无限公共包",
@@ -273,7 +304,10 @@ window.I18N = {
       "dependents": "被依赖"
     },
     "regexp": [],
-    "title": { "static": {}, "regexp": [] }
+    "title": {
+      "static": {},
+      "regexp": []
+    }
   },
 
   // ======== 搜索页 ========
@@ -291,7 +325,12 @@ window.I18N = {
       "show more packages": "显示更多包"
     },
     "regexp": [],
-    "title": { "static": { "Search results": "搜索结果" }, "regexp": [] }
+    "title": {
+      "static": {
+        "Search results": "搜索结果"
+      },
+      "regexp": []
+    }
   },
 
   // ======== 登录/注册页 ========
@@ -315,7 +354,13 @@ window.I18N = {
       "username or password was invalid.": "用户名或密码无效。"
     },
     "regexp": [],
-    "title": { "static": { "Sign In": "登录", "Sign Up": "注册" }, "regexp": [] }
+    "title": {
+      "static": {
+        "Sign In": "登录",
+        "Sign Up": "注册"
+      },
+      "regexp": []
+    }
   },
 
   // ======== 设置页 ========
@@ -421,7 +466,12 @@ window.I18N = {
       "Generate token": "生成令牌"
     },
     "regexp": [],
-    "title": { "static": { "Settings": "设置" }, "regexp": [] }
+    "title": {
+      "static": {
+        "Settings": "设置"
+      },
+      "regexp": []
+    }
   },
 
   // ======== 组织页 ========
@@ -434,7 +484,39 @@ window.I18N = {
       "Create team": "创建团队"
     },
     "regexp": [],
-    "title": { "static": {}, "regexp": [] }
+    "title": {
+      "static": {},
+      "regexp": []
+    }
+  },
+  // ======== 定价页 ========
+  "pricing": {
+    "static": {
+      "Pricing": "定价",
+      "For Public Package Authors": "面向公共包作者",
+      "For Individual Creators": "面向个人创作者",
+      "For Teams & Organizations": "面向团队与组织",
+      "Free": "免费",
+      "Pro": "专业版",
+      "Teams": "团队版",
+      "$ 0": "$ 0",
+      "$ 7": "$ 7",
+      "per month": "每月",
+      "per user per month": "每用户每月",
+      "Unlimited public packages": "无限公共包",
+      "Unlimited private packages": "无限私有包",
+      "Package-based permissions": "基于包的权限",
+      "Team-based permissions": "基于团队的权限",
+      "Feature Comparison": "功能对比",
+      "Unlimited public packages & automatic security warnings": "无限公共包与自动安全警告",
+      "Not included in Free plan": "免费版不包含",
+      "Not included in Pro plan": "专业版不包含",
+    },
+    "regexp": [],
+    "title": {
+      "static": {},
+      "regexp": []
+    }
   },
 
   // ======== 发布包页 ========
@@ -450,27 +532,54 @@ window.I18N = {
       "Readme file": "自述文件"
     },
     "regexp": [],
-    "title": { "static": { "Publish": "发布" }, "regexp": [] }
+    "title": {
+      "static": {
+        "Publish": "发布"
+      },
+      "regexp": []
+    }
   },
 
   // ======== 用户个人主页 ========
   "profile": {
-    "static": { "Joined": "加入时间" },
+    "static": {
+      "Joined": "加入时间"
+    },
     "regexp": [],
-    "title": { "static": {}, "regexp": [] }
+    "title": {
+      "static": {},
+      "regexp": []
+    }
   },
 
   // ======== 首页 ========
   "home": {
-    "static": {},
+    "static": {
+      "Build amazing things": "创造非凡",
+      "We're GitHub, the company behind the npm Registry and npm CLI. We offer those to the community for free, but our day job is building and selling useful tools for developers like you.": "我们是 GitHub，npm Registry 和 npm CLI 背后的公司。我们免费向社区提供这些服务，但我们的日常工作是构建并销售对像您这样的开发者有用的工具。",
+      "Take your JavaScript development up a notch": "让你的 JavaScript 开发更上一层楼",
+      "Get started today for free, or step up to npm Pro to enjoy a premium JavaScript development experience, with features like private packages.": "立即免费开始，或升级到 npm Pro，享受高级 JavaScript 开发体验，包括私有包等功能。",
+      "Sign up for free": "免费注册",
+      "Learn about Pro": "了解 Pro",
+      "Bring the best of open source to you, your team, and your company": "将最优秀的开源资源带给您、您的团队和您的公司",
+      "Relied upon by more than 17 million developers worldwide, npm is committed to making JavaScript development elegant, productive, and safe. The free npm Registry has become the center of JavaScript code sharing, and with more than two million packages, the largest software registry in the world. Our other tools and services take the Registry, and the work you do around it, to the next level.": "全球超过 1700 万开发者信赖 npm，我们致力于让 JavaScript 开发变得优雅、高效且安全。免费的 npm Registry 已成为 JavaScript 代码共享的中心，拥有超过两百万个包，是全球最大的软件注册表。我们的其他工具和服务将 Registry 及围绕它的工作提升到新的水平。",
+    },
     "regexp": [],
-    "title": { "static": { "npm": "npm" }, "regexp": [] }
+    "title": {
+      "static": {
+        "npm": "npm"
+      },
+      "regexp": []
+    }
   },
 
   // ======== 兜底 ========
   "default": {
     "static": {},
     "regexp": [],
-    "title": { "static": {}, "regexp": [] }
+    "title": {
+      "static": {},
+      "regexp": []
+    }
   }
 };
