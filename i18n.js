@@ -485,6 +485,35 @@ window.I18N = {
       "regexp": []
     }
   },
+  // ======== 定价页 ========
+  "pricing": {
+    "static": {
+      "Pricing": "定价",
+      "For Public Package Authors": "面向公共包作者",
+      "For Individual Creators": "面向个人创作者",
+      "For Teams & Organizations": "面向团队与组织",
+      "Free": "免费",
+      "Pro": "专业版",
+      "Teams": "团队版",
+      "$ 0": "$ 0",
+      "$ 7": "$ 7",
+      "per month": "每月",
+      "per user per month": "每用户每月",
+      "Unlimited public packages": "无限公共包",
+      "Unlimited private packages": "无限私有包",
+      "Package-based permissions": "基于包的权限",
+      "Team-based permissions": "基于团队的权限",
+      "Feature Comparison": "功能对比",
+      "Unlimited public packages & automatic security warnings": "无限公共包与自动安全警告",
+      "Not included in Free plan": "免费版不包含",
+      "Not included in Pro plan": "专业版不包含",
+    },
+    "regexp": [],
+    "title": {
+      "static": {},
+      "regexp": []
+    }
+  },
 
   // ======== 发布包页 ========
   "publish": {
