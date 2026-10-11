@@ -31,6 +31,10 @@ window.I18N = {
         pattern: /^\/~[^/]+/
       },
       {
+        type: "pricing",
+        pattern: /^\/products/
+      },
+      {
         type: "home",
         pattern: /^\/(?:$|\?)/
       },
