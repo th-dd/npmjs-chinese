@@ -140,7 +140,7 @@ window.I18N = {
       "visit our docs": "访问我们的文档",
       "to learn more.": "以了解更多信息。",
       "Security Update": "安全更新",
-      "npm tokens that bypass 2FA are being restricted - account changes (Aug 2026) and direct publishing (Jan 2027).": "绕过双因素身份验证的 npm 令牌正在受到限制——涉及账户变更（2026年8月）和直接发布（2027年1月）。"
+      "npm tokens that bypass 2FA are being restricted — account changes (Aug 2026) and direct publishing (Jan 2027). ": "绕过双因素身份验证的 npm 令牌正在受到限制——涉及账户变更（2026年8月）和直接发布（2027年1月）。"
       "Learn how to prepare →": "了解如何准备 →",
       "Publish your own packages to the world's most popular software ecosystem": "将您自己的包发布到全球最受欢迎的软件生态系统中",
       "Unlimited public packages": "无限公共包",
@@ -461,12 +461,21 @@ window.I18N = {
     "title": { "static": {}, "regexp": [] }
   },
 
-  // ======== 首页 ========
-  "home": {
-    "static": {},
+// ======== 首页 ========
+"home": {
+    "static": {
+      "Build amazing things": "创造非凡",
+      "We're GitHub, the company behind the npm Registry and npm CLI. We offer those to the community for free, but our day job is building and selling useful tools for developers like you.": "我们是 GitHub，npm Registry 和 npm CLI 背后的公司。我们免费向社区提供这些服务，但我们的日常工作是构建并销售对像您这样的开发者有用的工具。",
+      "Take your JavaScript development up a notch": "让你的 JavaScript 开发更上一层楼",
+      "Get started today for free, or step up to npm Pro to enjoy a premium JavaScript development experience, with features like private packages.": "立即免费开始，或升级到 npm Pro，享受高级 JavaScript 开发体验，包括私有包等功能。",
+      "Sign up for free": "免费注册",
+      "Learn about Pro": "了解 Pro",
+      "Bring the best of open source to you, your team, and your company": "将最优秀的开源资源带给您、您的团队和您的公司",
+      "Relied upon by more than 17 million developers worldwide, npm is committed to making JavaScript development elegant, productive, and safe. The free npm Registry has become the center of JavaScript code sharing, and with more than two million packages, the largest software registry in the world. Our other tools and services take the Registry, and the work you do around it, to the next level.": "全球超过 1700 万开发者信赖 npm，我们致力于让 JavaScript 开发变得优雅、高效且安全。免费的 npm Registry 已成为 JavaScript 代码共享的中心，拥有超过两百万个包，是全球最大的软件注册表。我们的其他工具和服务将 Registry 及围绕它的工作提升到新的水平。",
+    },
     "regexp": [],
     "title": { "static": { "npm": "npm" }, "regexp": [] }
-  },
+},
 
   // ======== 兜底 ========
   "default": {
