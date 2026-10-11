@@ -2,16 +2,42 @@ window.I18N = {
   // ======== 配置 ========
   conf: {
     // 页面类型识别（优先级从高到低）
-    rePagePath: [
-      { type: "package", pattern: /^\/package\/[^/]+/ },
-      { type: "search", pattern: /^\/search/ },
-      { type: "auth", pattern: /^\/(signin|signup|login|register)/ },
-      { type: "settings", pattern: /^\/settings/ },
-      { type: "org", pattern: /^\/orgs\/[^/]+/ },
-      { type: "publish", pattern: /^\/publish/ },
-      { type: "profile", pattern: /^\/~[^/]+/ },
-      { type: "home", pattern: /^\/(?:$|\?)/ },
-      { type: "default", pattern: /.*/ }
+    rePagePath: [{
+        type: "package",
+        pattern: /^\/package\/[^/]+/
+      },
+      {
+        type: "search",
+        pattern: /^\/search/
+      },
+      {
+        type: "auth",
+        pattern: /^\/(signin|signup|login|register)/
+      },
+      {
+        type: "settings",
+        pattern: /^\/settings/
+      },
+      {
+        type: "org",
+        pattern: /^\/orgs\/[^/]+/
+      },
+      {
+        type: "publish",
+        pattern: /^\/publish/
+      },
+      {
+        type: "profile",
+        pattern: /^\/~[^/]+/
+      },
+      {
+        type: "home",
+        pattern: /^\/(?:$|\?)/
+      },
+      {
+        type: "default",
+        pattern: /.*/
+      }
     ],
     // 忽略翻译的选择器（traverse 时使用）
     ignoreSelectorPage: {
@@ -274,7 +300,10 @@ window.I18N = {
       "dependents": "被依赖"
     },
     "regexp": [],
-    "title": { "static": {}, "regexp": [] }
+    "title": {
+      "static": {},
+      "regexp": []
+    }
   },
 
   // ======== 搜索页 ========
@@ -292,7 +321,12 @@ window.I18N = {
       "show more packages": "显示更多包"
     },
     "regexp": [],
-    "title": { "static": { "Search results": "搜索结果" }, "regexp": [] }
+    "title": {
+      "static": {
+        "Search results": "搜索结果"
+      },
+      "regexp": []
+    }
   },
 
   // ======== 登录/注册页 ========
@@ -316,7 +350,13 @@ window.I18N = {
       "username or password was invalid.": "用户名或密码无效。"
     },
     "regexp": [],
-    "title": { "static": { "Sign In": "登录", "Sign Up": "注册" }, "regexp": [] }
+    "title": {
+      "static": {
+        "Sign In": "登录",
+        "Sign Up": "注册"
+      },
+      "regexp": []
+    }
   },
 
   // ======== 设置页 ========
@@ -422,7 +462,12 @@ window.I18N = {
       "Generate token": "生成令牌"
     },
     "regexp": [],
-    "title": { "static": { "Settings": "设置" }, "regexp": [] }
+    "title": {
+      "static": {
+        "Settings": "设置"
+      },
+      "regexp": []
+    }
   },
 
   // ======== 组织页 ========
@@ -435,7 +480,10 @@ window.I18N = {
       "Create team": "创建团队"
     },
     "regexp": [],
-    "title": { "static": {}, "regexp": [] }
+    "title": {
+      "static": {},
+      "regexp": []
+    }
   },
 
   // ======== 发布包页 ========
@@ -451,18 +499,28 @@ window.I18N = {
       "Readme file": "自述文件"
     },
     "regexp": [],
-    "title": { "static": { "Publish": "发布" }, "regexp": [] }
+    "title": {
+      "static": {
+        "Publish": "发布"
+      },
+      "regexp": []
+    }
   },
 
   // ======== 用户个人主页 ========
   "profile": {
-    "static": { "Joined": "加入时间" },
+    "static": {
+      "Joined": "加入时间"
+    },
     "regexp": [],
-    "title": { "static": {}, "regexp": [] }
+    "title": {
+      "static": {},
+      "regexp": []
+    }
   },
 
-// ======== 首页 ========
-"home": {
+  // ======== 首页 ========
+  "home": {
     "static": {
       "Build amazing things": "创造非凡",
       "We're GitHub, the company behind the npm Registry and npm CLI. We offer those to the community for free, but our day job is building and selling useful tools for developers like you.": "我们是 GitHub，npm Registry 和 npm CLI 背后的公司。我们免费向社区提供这些服务，但我们的日常工作是构建并销售对像您这样的开发者有用的工具。",
@@ -474,13 +532,21 @@ window.I18N = {
       "Relied upon by more than 17 million developers worldwide, npm is committed to making JavaScript development elegant, productive, and safe. The free npm Registry has become the center of JavaScript code sharing, and with more than two million packages, the largest software registry in the world. Our other tools and services take the Registry, and the work you do around it, to the next level.": "全球超过 1700 万开发者信赖 npm，我们致力于让 JavaScript 开发变得优雅、高效且安全。免费的 npm Registry 已成为 JavaScript 代码共享的中心，拥有超过两百万个包，是全球最大的软件注册表。我们的其他工具和服务将 Registry 及围绕它的工作提升到新的水平。",
     },
     "regexp": [],
-    "title": { "static": { "npm": "npm" }, "regexp": [] }
-},
+    "title": {
+      "static": {
+        "npm": "npm"
+      },
+      "regexp": []
+    }
+  },
 
   // ======== 兜底 ========
   "default": {
     "static": {},
     "regexp": [],
-    "title": { "static": {}, "regexp": [] }
+    "title": {
+      "static": {},
+      "regexp": []
+    }
   }
 };
